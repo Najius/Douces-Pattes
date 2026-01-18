@@ -1,0 +1,16 @@
+# robots.txt pour Douces Pattes
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://doucespattes.fr/sitemap.xml
+
+# Exclure les fichiers inutiles pour le SEO
+Disallow: /css/
+Disallow: /js/
+Disallow: /assets/images/patterns/
+
+# Permettre l'indexation des images importantes
+Allow: /assets/images/logos/
+Allow: /assets/images/cats/

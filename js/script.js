@@ -1,12 +1,22 @@
-const emailTo = "contact@doucevisite.fr";
+// ==============================================
+// Script principal - Douces Pattes
+// ==============================================
 
-function $(id) {
-  return document.getElementById(id);
-}
+const CONFIG = {
+  emailTo: "contact@doucevisite.fr",
+  revealThreshold: 0.12,
+  revealMargin: "0px 0px -10% 0px"
+};
+
+// Utilitaires
+const $ = (id) => document.getElementById(id);
+const $$ = (selector) => document.querySelectorAll(selector);
 
 function setYear() {
-  const year = $("year");
-  if (year) year.textContent = String(new Date().getFullYear());
+  const yearElement = $("year");
+  if (yearElement) {
+    yearElement.textContent = String(new Date().getFullYear());
+  }
 }
 
 function initSmoothScroll() {
@@ -26,7 +36,8 @@ function initSmoothScroll() {
 
 function initReveal() {
   const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-  const nodes = Array.from(document.querySelectorAll("[data-reveal]"));
+  const nodes = Array.from($$("[data-reveal]"));
+  
   if (!nodes.length) return;
 
   nodes.forEach((el) => el.classList.add("reveal"));
@@ -36,18 +47,23 @@ function initReveal() {
     return;
   }
 
-  const io = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-revealed");
-        io.unobserve(entry.target);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
       });
     },
-    { root: null, threshold: 0.12, rootMargin: "0px 0px -10% 0px" }
+    { 
+      root: null, 
+      threshold: CONFIG.revealThreshold, 
+      rootMargin: CONFIG.revealMargin 
+    }
   );
 
-  nodes.forEach((el) => io.observe(el));
+  nodes.forEach((el) => observer.observe(el));
 }
 
 function initLogos() {
@@ -56,7 +72,11 @@ function initLogos() {
 
   logoImgs.forEach((img) => {
     const badge = img.closest(".logo-badge");
-    const candidates = ["assets/logo.jpg", "assets/logo.jpeg", "assets/logo.png"];
+    const candidates = [
+      "assets/images/logos/logo.jpg", 
+      "assets/images/logos/logo.jpeg", 
+      "assets/images/logos/logo.png"
+    ];
 
     const tryLoad = (i) => {
       if (i >= candidates.length) {
@@ -120,13 +140,13 @@ function initContactForm() {
       message,
     ];
 
-    const mailto = `mailto:${encodeURIComponent(emailTo)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    const mailto = `mailto:${encodeURIComponent(CONFIG.emailTo)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
 
     if (status) status.textContent = "Ouverture de votre email…";
     window.location.href = mailto;
 
     setTimeout(() => {
-      if (status) status.textContent = "Si rien ne s’est ouvert, écrivez directement à contact@doucevisite.fr.";
+      if (status) status.textContent = `Si rien ne s'est ouvert, écrivez directement à ${CONFIG.emailTo}.`;
     }, 1200);
   });
 }
