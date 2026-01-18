@@ -472,6 +472,19 @@ a:hover { text-decoration: underline; }
   background: transparent;
   border: none;
 }
+.feature-icon.icon-image {
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.feature-icon.icon-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
 .callout {
   margin-top: 18px;
