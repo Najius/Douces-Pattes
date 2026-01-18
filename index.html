@@ -608,43 +608,35 @@
       </section>
 
       <section class="section contact" id="contact">
-        <div class="container contact-grid">
-          <div>
-            <div class="section-header" data-reveal>
-              <h2>Réserver une visite</h2>
-              <p>Parlez-moi de votre chat et de vos dates : je vous réponds rapidement avec une proposition claire.</p>
-            </div>
-
-            <div class="contact-cards" data-reveal>
-              <div class="contact-card">
-                <div class="contact-label">Zone de service</div>
-                <div class="contact-value">Bordeaux + alentours</div>
-                <div class="contact-sub">(à préciser selon votre quartier)</div>
-              </div>
-              <div class="contact-card">
-                <div class="contact-label">Email</div>
-                <div class="contact-value"><a href="mailto:contact@doucevisite.fr">contact@doucespattes.fr</a></div>
-                <div class="contact-sub">Réponse sous 24h (ouvrées)</div>
-              </div>
-            </div>
-
-            <p class="closing" data-reveal>Votre chat reste chez lui, dans ses repères. Vous, vous partez serein(e).</p>
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <h2>Réserver une visite</h2>
+            <p>Parlez-moi de votre chat et de vos dates : je vous réponds rapidement avec une proposition claire.</p>
           </div>
 
           <form class="form" id="contact-form" novalidate data-reveal>
-            <div class="field">
-              <label for="name">Nom</label>
-              <input id="name" name="name" autocomplete="name" required />
+            <div class="field-row">
+              <div class="field">
+                <label for="owner-name">Votre nom</label>
+                <input id="owner-name" name="owner-name" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label for="cat-name">Nom du chat</label>
+                <input id="cat-name" name="cat-name" required />
+              </div>
             </div>
 
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
 
-            <div class="field">
-              <label for="phone">Téléphone (optionnel)</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+              <div class="field">
+                <label for="phone">Téléphone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
             </div>
 
             <div class="field">
@@ -653,8 +645,19 @@
             </div>
 
             <div class="field">
-              <label for="dates">Dates et fréquence</label>
-              <input id="dates" name="dates" placeholder="Ex. du 12 au 18 mars — 1 visite/jour" required />
+              <label for="dates">Dates d'absence</label>
+              <input id="dates" name="dates" type="text" placeholder="Ex. du 12 au 18 mars" required />
+            </div>
+
+            <div class="field">
+              <label for="frequency">Fréquence des visites</label>
+              <select id="frequency" name="frequency" required>
+                <option value="">Sélectionnez...</option>
+                <option value="1-visite-jour">1 visite par jour</option>
+                <option value="2-visites-jour">2 visites par jour</option>
+                <option value="tous-2-jours">1 visite tous les 2 jours</option>
+                <option value="autre">À définir ensemble</option>
+              </select>
             </div>
 
             <div class="field">
