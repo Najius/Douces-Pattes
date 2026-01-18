@@ -727,12 +727,11 @@ a:hover { text-decoration: underline; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   scroll-snap-align: start;
-  box-shadow: 0 16px 40px rgba(31, 36, 33, 0.12);
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  border: 1px solid var(--line);
+  transition: transform 200ms ease;
 }
 .gallery-photo:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(31, 36, 33, 0.16);
+  transform: translateY(-2px);
 }
 .gallery-photo img {
   width: 100%;
@@ -793,7 +792,6 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 18px;
-  box-shadow: 0 14px 28px rgba(31, 36, 33, 0.06);
   position: relative;
   min-width: 340px;
   max-width: 340px;
