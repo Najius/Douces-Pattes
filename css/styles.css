@@ -1141,8 +1141,6 @@ input:focus, textarea:focus, select:focus {
   .about-photo { position: static; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-cards { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; }
-  .footer-legal { text-align: left; }
 }
 
 /* Bouton CTA flottant */
