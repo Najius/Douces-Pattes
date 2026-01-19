@@ -3,4 +3,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://najius.github.io/Douces-Pattes/sitemap.xml
+Sitemap: https://douces-pattes.netlify.app/sitemap.xml
