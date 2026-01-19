@@ -693,7 +693,7 @@
             <p>Parlez-moi de votre animal et de vos dates : je vous réponds rapidement avec une proposition claire.</p>
           </div>
 
-          <form class="form" id="contact-form" novalidate data-reveal>
+          <form class="form" id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="website" action="/merci.html" novalidate data-reveal>
             <div class="field-row">
               <div class="field">
                 <label for="owner-name">Votre nom</label>
@@ -755,11 +755,14 @@
               <textarea id="message" name="message" rows="5" placeholder="Âge, caractère, traitement éventuel, habitudes, accès au logement…" required></textarea>
             </div>
 
-            <!-- Honeypot anti-spam -->
+            <!-- Netlify form name (required) -->
+            <input type="hidden" name="form-name" value="contact" />
+            
+            <!-- Honeypot anti-spam (géré par Netlify) -->
             <input type="text" name="website" id="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
             <button class="button primary" type="submit">Envoyer la demande</button>
-            <p class="form-hint" id="form-hint">Ce formulaire ouvre votre application mail pour envoyer le message. Vous pouvez aussi écrire directement à <a href="mailto:contact@doucespattes.fr">contact@doucespattes.fr</a>.</p>
+            <p class="form-hint" id="form-hint">Vous recevrez une confirmation par email. En cas de besoin, écrivez à <a href="mailto:contact@doucespattes.fr">contact@doucespattes.fr</a>.</p>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>

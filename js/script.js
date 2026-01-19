@@ -106,72 +106,41 @@ function initContactForm() {
 
   if (!form) return;
 
+  // Netlify Forms gère maintenant la soumission
+  // On garde juste la validation côté client pour UX
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // Protection honeypot anti-spam
-    const honeypot = $("website")?.value;
-    if (honeypot) {
-      console.log("Spam détecté via honeypot");
-      return; // Bloque silencieusement
-    }
-
-    const ownerName = $("owner-name")?.value?.trim();
-    const petName = $("pet-name")?.value?.trim();
-    const email = $("email")?.value?.trim();
-    const phone = $("phone")?.value?.trim();
-    const city = $("city")?.value?.trim();
-    const dates = $("dates")?.value?.trim();
-    const frequency = $("frequency")?.value;
-    const petType = $("pet-type")?.value;
-    const message = $("message")?.value?.trim();
-
-    // Validation des champs obligatoires
-    const missing = [];
-    if (!ownerName) missing.push("votre nom");
-    if (!petName) missing.push("nom de l'animal");
-    if (!email) missing.push("email");
-    if (!city) missing.push("ville/quartier");
-    if (!dates) missing.push("dates d'absence");
-    if (!frequency) missing.push("fréquence des visites");
-    if (!petType) missing.push("type d'animal");
-    if (!message) missing.push("message");
-
-    if (missing.length) {
-      if (status) status.textContent = `Merci de compléter : ${missing.join(", ")}.`;
+    // Honeypot check
+    const honeypot = $("website");
+    if (honeypot && honeypot.value) {
+      e.preventDefault();
+      console.warn("Honeypot triggered");
       return;
     }
 
-    // Validation email avec regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      if (status) status.textContent = "L'adresse email n'est pas valide.";
-      return;
+    // Validation basique (Netlify valide aussi côté serveur)
+    const email = $("email")?.value.trim();
+    const phone = $("phone")?.value.trim();
+
+    if (email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        e.preventDefault();
+        if (status) status.textContent = "Email invalide. Format : exemple@domaine.fr";
+        return;
+      }
     }
 
-    // Construction du sujet et du corps de l'email
-    const subject = `Demande de pet sitting à Bordeaux — ${ownerName}`;
-    const bodyLines = [
-      `Propriétaire : ${ownerName}`,
-      `Animal : ${petName} (${petType})`,
-      `Email : ${email}`,
-      `Téléphone : ${phone || "(non renseigné)"}`,
-      `Ville / quartier : ${city}`,
-      `Dates d'absence : ${dates}`,
-      `Fréquence : ${frequency}`,
-      "",
-      "Message :",
-      message,
-    ];
+    if (phone) {
+      const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+      if (!phoneRegex.test(phone)) {
+        e.preventDefault();
+        if (status) status.textContent = "Numéro invalide. Format : 06 XX XX XX XX";
+        return;
+      }
+    }
 
-    const mailto = `mailto:${encodeURIComponent(CONFIG.emailTo)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
-
-    if (status) status.textContent = "Ouverture de votre email…";
-    window.location.href = mailto;
-
-    setTimeout(() => {
-      if (status) status.textContent = `Si rien ne s'est ouvert, écrivez directement à ${CONFIG.emailTo}.`;
-    }, 1200);
+    // Si tout est OK, laisser Netlify gérer la soumission
+    if (status) status.textContent = "Envoi en cours...";
   });
 }
 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Merci ! — Douces Pattes</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="assets/images/logos/logov2.png" />
+    <style>
+      .thank-you-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .thank-you-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .thank-you-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 24px;
+        background: var(--terracotta);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: scaleIn 0.5s ease;
+      }
+      .thank-you-icon svg {
+        width: 40px;
+        height: 40px;
+        stroke: white;
+        stroke-width: 3;
+      }
+      @keyframes scaleIn {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .thank-you-content h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+      .thank-you-content p {
+        font-size: 18px;
+        color: var(--muted);
+        line-height: 1.6;
+        margin-bottom: 32px;
+      }
+      .thank-you-buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .thank-you-buttons .button {
+        min-width: 160px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thank-you-container">
+      <div class="thank-you-content">
+        <div class="thank-you-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        
+        <h1>Message envoyé !</h1>
+        
+        <p>
+          Merci pour votre demande. Je vous réponds généralement sous <strong>24h maximum</strong>.<br>
+          Vérifiez vos spams si vous ne recevez pas de réponse rapidement.
+        </p>
+        
+        <div class="thank-you-buttons">
+          <a href="/#contact" class="button secondary">Retour au formulaire</a>
+          <a href="/" class="button primary">Retour à l'accueil</a>
+        </div>
+        
+        <p style="margin-top: 32px; font-size: 14px;">
+          <strong>Urgence ?</strong><br>
+          Appelez-moi directement ou écrivez à<br>
+          <a href="mailto:contact@doucespattes.fr" style="color: var(--terracotta);">contact@doucespattes.fr</a>
+        </p>
+      </div>
+    </div>
+    
+    <script>
+      // Auto-scroll pour retour formulaire
+      if (window.location.hash === '#contact') {
+        setTimeout(() => {
+          const contact = document.getElementById('contact');
+          if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+      
+      // Copyright year
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
