@@ -151,8 +151,44 @@ function initContactForm() {
   });
 }
 
+function initBurgerMenu() {
+  const burger = $("burger-toggle");
+  const nav = $("main-nav");
+  
+  if (!burger || !nav) return;
+  
+  burger.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    burger.classList.toggle("active");
+    burger.setAttribute("aria-expanded", String(isOpen));
+    burger.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+  });
+  
+  // Fermer le menu quand on clique sur un lien
+  const navLinks = nav.querySelectorAll("a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      burger.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Ouvrir le menu");
+    });
+  });
+  
+  // Fermer le menu si on clique en dehors
+  document.addEventListener("click", (e) => {
+    if (!burger.contains(e.target) && !nav.contains(e.target) && nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      burger.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Ouvrir le menu");
+    }
+  });
+}
+
 setYear();
 initSmoothScroll();
 initContactForm();
 initReveal();
 initLogos();
+initBurgerMenu();

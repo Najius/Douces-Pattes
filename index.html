@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cat sitter à Bordeaux : visites à domicile pour chats, soins personnalisés, nouvelles quotidiennes. ACACED, assurée, fiable." />
-    <title>Cat Sitter Bordeaux | Visites à domicile pour chats — Douces Pattes</title>
+    <meta name="description" content="Pet sitter à Bordeaux : visites à domicile et home sitting pour chats et chiens, soins personnalisés, nouvelles quotidiennes. ACACED, assurée, fiable." />
+    <title>Pet Sitter Bordeaux | Garde chats & chiens à domicile — Douces Pattes</title>
     <link rel="icon" href="assets/images/logos/logo.jpg" />
     <link rel="apple-touch-icon" href="assets/images/logos/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,13 +19,18 @@
 
     <header class="site-header">
       <div class="container header-inner-centered">
-        <nav class="nav-modern" aria-label="Navigation principale">
+        <button class="burger-menu" id="burger-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-modern" id="main-nav" aria-label="Navigation principale">
           <a href="#top" class="nav-home" aria-label="Retour en haut de page">Accueil</a>
           <a href="#apropos">À propos</a>
+          <a href="#avis">Avis</a>
           <a href="#services">Services</a>
           <a href="#fonctionnement">Fonctionnement</a>
           <a href="#tarifs">Tarifs</a>
-          <a href="#avis">Avis</a>
           <a href="#faq">FAQ</a>
           <a class="nav-cta" href="#contact">Réserver</a>
         </nav>
@@ -36,12 +41,12 @@
       <section class="hero">
         <div class="container hero-content">
           <div class="hero-logo">
-            <img src="assets/images/logos/logov2.png" alt="Douces Pattes - Cat Sitter Bordeaux" class="hero-logo-img" loading="eager" decoding="async" />
+            <img src="assets/images/logos/logov2.png" alt="Douces Pattes - Pet Sitter Bordeaux" class="hero-logo-img" loading="eager" decoding="async" />
           </div>
 
           <div class="hero-copy">
-            <h1>Je m'occupe de votre chat à Bordeaux pendant vos absences</h1>
-            <p class="lead">Votre chat reste chez lui, dans ses repères. Je viens chaque jour avec douceur et attention. Vous partez tranquille, je vous donne des nouvelles.</p>
+            <h1>Je m'occupe de votre chat ou chien à Bordeaux pendant vos absences</h1>
+            <p class="lead">Votre animal reste chez lui, dans ses repères. Visites à domicile ou home sitting : je m'adapte à vos besoins. Vous partez tranquille, je vous donne des nouvelles.</p>
 
             <div class="cta-row">
               <a class="button primary" href="#contact">Réserver une visite</a>
@@ -67,7 +72,7 @@
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l7 4v6c0 5-3 9-7 10C8 21 5 17 5 12V6l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 12.2l1.9 1.9 3.8-4.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
-                <span>ACACED (option chat)</span>
+                <span>ACACED (chat & chien)</span>
               </div>
               <div class="trust-pill">
                 <span class="icon" aria-hidden="true">
@@ -98,8 +103,8 @@
               <div class="feature-icon icon-image" aria-hidden="true">
                 <img src="assets/passion.png" alt="" />
               </div>
-              <h3>Passion pour les chats</h3>
-              <p class="card-desc">J'observe comment votre chat se déplace, où il se réfugie quand il a peur, ce qui le rassure vraiment. Je m'adapte à chaque chat, sans appliquer de méthode toute faite.</p>
+              <h3>Passion pour les animaux</h3>
+              <p class="card-desc">J'observe comment votre animal se comporte, ce qui le rassure, ce dont il a besoin. Chats ou chiens : je m'adapte à chaque caractère, sans appliquer de méthode toute faite.</p>
             </article>
 
             <article class="card" data-reveal>
@@ -115,7 +120,7 @@
                 <img src="assets/disponibilite.png" alt="" />
               </div>
               <h3>Disponibilité & réactivité</h3>
-              <p class="card-desc">Je réponds rapidement et je limite volontairement le nombre de visites par jour. Cela me permet d'être réellement disponible pour chaque chat.</p>
+              <p class="card-desc">Je réponds rapidement et je limite volontairement le nombre de visites par jour. Cela me permet d'être réellement disponible pour chaque animal.</p>
             </article>
 
             <article class="card" data-reveal>
@@ -123,7 +128,7 @@
                 <img src="assets/Approche.png" alt="" />
               </div>
               <h3>Approche douce & calme</h3>
-              <p class="card-desc">Je prends le temps nécessaire. Si votre chat a envie de jouer, on joue. S'il préfère rester à distance, je respecte son rythme, sans jamais forcer le contact.</p>
+              <p class="card-desc">Je prends le temps nécessaire. Si votre animal a envie de jouer, on joue. S'il préfère rester à distance, je respecte son rythme, sans jamais forcer le contact.</p>
             </article>
           </div>
         </div>
@@ -133,7 +138,7 @@
         <div class="container">
           <div class="section-header" data-reveal>
             <h2>À propos</h2>
-            <p>Noémie, passionnée par les chats, certifiée et installée à Bordeaux.</p>
+            <p>Noémie, passionnée par les chats et les chiens, certifiée ACACED, installée à Bordeaux.</p>
           </div>
 
           <div class="about-content" data-reveal>
@@ -141,13 +146,13 @@
               <img src="assets/noemie.jpg" alt="Noémie - Cat Sitter Bordeaux" loading="lazy" decoding="async" />
             </div>
             <div class="about-text">
-              <p>Bonjour, je suis <strong>Noémie</strong> et j'ai toujours eu une passion pour les chats. Leur indépendance, leur sensibilité et leur caractère unique me fascinent depuis mon enfance.</p>
+              <p>Bonjour, je suis <strong>Noémie</strong> et j'ai toujours eu une passion pour les animaux. Leur personnalité unique, leur sensibilité et leur besoin de routine me fascinent depuis mon enfance.</p>
               
-              <p>Diplômée de l'<strong>ACACED</strong> (Attestation de Connaissances pour les Animaux de Compagnie d'Espèces Domestiques) option chat, j'ai décidé de faire de cette passion mon métier. Je propose des <strong>services de cat sitting à domicile à Bordeaux</strong> et ses environs.</p>
+              <p>Diplômée de l'<strong>ACACED</strong> (Attestation de Connaissances pour les Animaux de Compagnie d'Espèces Domestiques) options chat et chien, j'ai décidé de faire de cette passion mon métier. Je propose des <strong>services de garde à domicile à Bordeaux</strong> et ses environs : visites quotidiennes ou home sitting.</p>
               
-              <p>Ce qui me motive chaque jour ? Savoir que je contribue au <strong>bien-être de vos compagnons félins</strong> et à votre <strong>tranquillité d'esprit</strong> pendant vos absences. Chaque chat est unique, et j'adapte mes visites à son tempérament et ses besoins spécifiques.</p>
+              <p>Ce qui me motive chaque jour ? Savoir que je contribue au <strong>bien-être de vos compagnons</strong> et à votre <strong>tranquillité d'esprit</strong> pendant vos absences. Chaque animal est unique, et j'adapte mes visites à son tempérament et ses besoins spécifiques.</p>
               
-              <p>Mon approche est basée sur le <strong>respect, la douceur et l'observation</strong>. Je prends le temps de créer une relation de confiance avec chaque chat, sans jamais forcer le contact. Pour moi, le cat sitting va au-delà du simple nourrissage : c'est offrir une <strong>présence rassurante et attentive</strong>.</p>
+              <p>Mon approche est basée sur le <strong>respect, la douceur et l'observation</strong>. Je prends le temps de créer une relation de confiance avec chaque animal, sans jamais forcer le contact. Pour moi, la garde d'animaux va au-delà du simple nourrissage : c'est offrir une <strong>présence rassurante et attentive</strong>.</p>
             </div>
           </div>
         </div>
@@ -157,7 +162,7 @@
         <div class="container">
           <div class="section-header" data-reveal>
             <h2>Quelques visages familiers</h2>
-            <p>Les chats dont je prends soin régulièrement.</p>
+            <p>Les animaux dont je prends soin régulièrement.</p>
           </div>
         </div>
 
@@ -167,31 +172,31 @@
               <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat tigré sur canapé" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat gris regardant" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Golden retriever heureux" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
               <img src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat mignon" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat roux" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chien beagle adorable" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
               <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat tigré" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1828875/pexels-photo-1828875.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat blanc" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Labrador joyeux" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
               <img src="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat noir élégant" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1741205/pexels-photo-1741205.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat calme" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/1458925/pexels-photo-1458925.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chien border collie" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
               <img src="https://images.pexels.com/photos/1359307/pexels-photo-1359307.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat paisible" loading="lazy" decoding="async" />
             </div>
             <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat serein" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/1629781/pexels-photo-1629781.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chien husky" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -229,12 +234,12 @@
 
             <figure class="quote" data-reveal>
               <div class="quote-gallery">
-                <img class="quote-cat" src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chat gris" loading="lazy" decoding="async" />
-                <img class="quote-cat" src="https://images.pexels.com/photos/1359307/pexels-photo-1359307.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chat relaxant" loading="lazy" decoding="async" />
-                <img class="quote-cat" src="https://images.pexels.com/photos/1741205/pexels-photo-1741205.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chat curieux" loading="lazy" decoding="async" />
+                <img class="quote-cat" src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Golden retriever" loading="lazy" decoding="async" />
+                <img class="quote-cat" src="https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chien beagle" loading="lazy" decoding="async" />
+                <img class="quote-cat" src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Labrador" loading="lazy" decoding="async" />
               </div>
-              <div class="quote-pet">Félix</div>
-              <blockquote>« Très professionnelle, ponctuelle et douce avec notre chat âgé. Les médicaments ont été donnés sans stress, avec patience et douceur. Tout était impeccable à notre retour : litière propre, gamelles lavées, appartement rangé. Nous avons vraiment apprécié son attention aux détails et sa communication régulière. Une personne de confiance qu'on recommande les yeux fermés. »</blockquote>
+              <div class="quote-pet">Rocky</div>
+              <blockquote>« Très professionnelle, ponctuelle et douce avec notre chien âgé. Les médicaments ont été donnés sans stress, avec patience et douceur. Les promenades ont été adaptées à son rythme. Tout était impeccable à notre retour : gamelles lavées, appartement rangé. Nous avons vraiment apprécié son attention aux détails et sa communication régulière. Une personne de confiance qu'on recommande les yeux fermés. »</blockquote>
               <div class="quote-rating" aria-label="Note 5/5">
                 <span class="stars">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.3l-5.1 3 1.4-5.7L3.8 10l5.9-.5L12 4l2.3 5.5 5.9.5-4.5 4.6 1.4 5.7-5.1-3z" fill="currentColor"/></svg>
@@ -269,12 +274,12 @@
 
             <figure class="quote" data-reveal>
               <div class="quote-gallery">
-                <img class="quote-cat" src="https://images.pexels.com/photos/1828875/pexels-photo-1828875.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chat blanc" loading="lazy" decoding="async" />
-                <img class="quote-cat" src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chat tranquille" loading="lazy" decoding="async" />
-                <img class="quote-cat" src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chat affectueux" loading="lazy" decoding="async" />
+                <img class="quote-cat" src="https://images.pexels.com/photos/1458925/pexels-photo-1458925.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Border collie" loading="lazy" decoding="async" />
+                <img class="quote-cat" src="https://images.pexels.com/photos/1629781/pexels-photo-1629781.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Husky" loading="lazy" decoding="async" />
+                <img class="quote-cat" src="https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Beagle joueur" loading="lazy" decoding="async" />
               </div>
-              <div class="quote-pet">Blanchette</div>
-              <blockquote>« Service irréprochable du premier contact jusqu'au retour ! Notre chat très craintif a été respecté dans son rythme, jamais brusqué. Elle a pris le temps de le laisser venir à elle naturellement. Nous avons eu des nouvelles quotidiennes avec des détails sur son comportement, son alimentation et son moral. C'est un vrai plus de savoir son animal entre de bonnes mains pendant les vacances. »</blockquote>
+              <div class="quote-pet">Luna</div>
+              <blockquote>« Service irréprochable du premier contact jusqu'au retour ! Notre chienne très énergique a été parfaitement prise en charge. Les promenades quotidiennes, le jeu et l'attention donnée ont fait toute la différence. Nous avons eu des nouvelles quotidiennes avec des détails sur son comportement, ses promenades et son moral. C'est un vrai plus de savoir son animal entre de bonnes mains pendant les vacances. »</blockquote>
               <div class="quote-rating" aria-label="Note 5/5">
                 <span class="stars">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.3l-5.1 3 1.4-5.7L3.8 10l5.9-.5L12 4l2.3 5.5 5.9.5-4.5 4.6 1.4 5.7-5.1-3z" fill="currentColor"/></svg>
@@ -390,66 +395,21 @@
         </div>
       </section>
 
-      <section class="section" id="confiance">
-        <div class="container">
-          <div class="section-header" data-reveal>
-            <h2>Confiance & sérénité</h2>
-            <p>Votre chat mérite une présence calme et attentive. Je privilégie une approche respectueuse, sans précipitation, adaptée à son tempérament.</p>
-          </div>
-
-          <div class="grid-3">
-            <div class="feature" data-reveal>
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V6a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 4v5h5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 13h8M8 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              </div>
-              <h3>ACACED (chat)</h3>
-              <p>Certification obligatoire en France pour exercer auprès des animaux de compagnie. Un cadre sérieux, des bonnes pratiques.</p>
-            </div>
-
-            <div class="feature" data-reveal>
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l8 4v6c0 5.2-3.4 9.6-8 10-4.6-.4-8-4.8-8-10V6l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 9v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              </div>
-              <h3>Assurance RC Pro</h3>
-              <p>Vous confiez vos clés et votre domicile : je suis assurée en responsabilité civile professionnelle.</p>
-            </div>
-
-            <div class="feature" data-reveal>
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c5-3 8-7 8-11a4 4 0 00-6-3 4 4 0 00-2 2 4 4 0 00-2-2 4 4 0 00-6 3c0 4 3 8 8 11z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-              </div>
-              <h3>Suivi personnalisé</h3>
-              <p>Habitudes, alimentation, jeux, litière, zones sensibles… Chaque chat a son rythme, je m’y adapte.</p>
-            </div>
-          </div>
-
-          <div class="callout" data-reveal>
-            <div class="callout-inner">
-              <div>
-                <h3>Service local à Bordeaux</h3>
-                <p>Interventions principalement à Bordeaux et autour (quartiers centraux + proximité). Dites-moi votre adresse, je vous confirme rapidement la zone.</p>
-              </div>
-              <a class="button tertiary" href="#contact">Vérifier la disponibilité</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="services">
         <div class="container">
           <div class="section-header" data-reveal>
-            <h2>Services de cat sitting à domicile</h2>
-            <p>Des visites pensées pour le bien-être de votre chat, avec des nouvelles claires à chaque passage.</p>
+            <h2>Services de garde à domicile</h2>
+            <p>Visites quotidiennes ou home sitting : des solutions pensées pour le bien-être de votre animal, avec des nouvelles claires à chaque passage.</p>
           </div>
 
-          <div class="cards">
+          <div class="cards-services">
             <article class="card" data-reveal>
               <div class="feature-icon icon-image" aria-hidden="true">
                 <img src="assets/30.png" alt="" />
               </div>
               <h3>Visite 30 minutes</h3>
               <p class="card-desc">Essentiel : nourriture, eau, litière, vérification de l'état général, moment de présence.</p>
-              <p class="card-use"><strong>Idéal pour :</strong> chats indépendants, absences courtes, routine simple.</p>
+              <p class="card-use"><strong>Idéal pour :</strong> chats indépendants, absences courtes.</p>
             </article>
 
             <article class="card" data-reveal>
@@ -457,8 +417,8 @@
                 <img src="assets/45.png" alt="" />
               </div>
               <h3>Visite 45–60 minutes</h3>
-              <p class="card-desc">Plus de temps pour le jeu, l'interaction, le brossage (si apprécié), et un suivi plus complet.</p>
-              <p class="card-use"><strong>Idéal pour :</strong> chats sociables, chats stressés, longues absences.</p>
+              <p class="card-desc">Plus de temps pour le jeu, l'interaction, le brossage, les promenades (chiens), et un suivi plus complet.</p>
+              <p class="card-use"><strong>Idéal pour :</strong> chiens, chats sociables, longues absences.</p>
             </article>
 
             <article class="card" data-reveal>
@@ -478,10 +438,24 @@
               <p class="card-desc">À chaque visite, vous recevez des nouvelles rassurantes : photos, vidéo courte et résumé.</p>
               <p class="card-use"><strong>Idéal pour :</strong> partir serein(e), garder le lien, vérifier que tout va bien.</p>
             </article>
-          </div>
 
-          <div class="note" data-reveal>
-            <p><strong>Option :</strong> arrosage léger des plantes, ouverture/fermeture des volets, relevé du courrier (selon durée et conditions).</p>
+            <article class="card" data-reveal>
+              <div class="feature-icon icon-image" aria-hidden="true">
+                <img src="assets/homesitting.png" alt="" />
+              </div>
+              <h3>Home sitting</h3>
+              <p class="card-desc">Je dors à votre domicile pendant votre absence. Présence continue, sécurité renforcée, routine maintenue.</p>
+              <p class="card-use"><strong>Idéal pour :</strong> chiens nécessitant une présence constante, animaux anxieux, longues absences.</p>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="feature-icon icon-image" aria-hidden="true">
+                <img src="assets/options.png" alt="" />
+              </div>
+              <h3>Services complémentaires</h3>
+              <p class="card-desc">Arrosage léger des plantes, ouverture/fermeture des volets, relevé du courrier.</p>
+              <p class="card-use"><strong>Idéal pour :</strong> maintenir votre domicile pendant vos absences prolongées.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -490,7 +464,7 @@
         <div class="container">
           <div class="section-header" data-reveal>
             <h2>Comment ça marche</h2>
-            <p>Un processus simple, clair, et pensé pour la sécurité de votre chat et de votre domicile.</p>
+            <p>Un processus simple, clair, et pensé pour la sécurité de votre animal et de votre domicile.</p>
           </div>
 
           <ol class="steps">
@@ -504,15 +478,15 @@
             <li class="step" data-reveal>
               <div class="step-num" aria-hidden="true">2</div>
               <div>
-                <h3>Rencontre “meet & greet”</h3>
-                <p>Visite préalable à domicile : découverte du chat, consignes, remise des clés, points de sécurité.</p>
+                <h3>Rencontre "meet & greet"</h3>
+                <p>Visite préalable à domicile : découverte de votre animal (chat ou chien), consignes, remise des clés, points de sécurité.</p>
               </div>
             </li>
             <li class="step" data-reveal>
               <div class="step-num" aria-hidden="true">3</div>
               <div>
-                <h3>Visites pendant votre absence</h3>
-                <p>Je respecte la routine : repas, eau, litière, jeux, surveillance, et moments calmes si votre chat préfère.</p>
+                <h3>Visites ou home sitting</h3>
+                <p>Je respecte la routine : repas, eau, litière/promenades, jeux, surveillance, et moments calmes selon le caractère de votre animal.</p>
               </div>
             </li>
             <li class="step" data-reveal>
@@ -546,7 +520,12 @@
             <div class="price-card" data-reveal>
               <h3>Visite 45–60 minutes</h3>
               <p class="price">À partir de <strong>25€</strong></p>
-              <p class="price-note">Recommandée pour chats sociables ou besoins plus complets.</p>
+              <p class="price-note">Recommandée pour animaux sociables, chiens, ou besoins plus complets.</p>
+            </div>
+            <div class="price-card" data-reveal>
+              <h3>Home sitting</h3>
+              <p class="price">À partir de <strong>45€</strong>/nuit</p>
+              <p class="price-note">Présence continue à votre domicile. Tarif dégressif selon durée.</p>
             </div>
             <div class="price-card" data-reveal>
               <h3>Meet & greet</h3>
@@ -559,11 +538,56 @@
             <h3>Suppléments possibles</h3>
             <div class="pill-row">
               <span class="pill">Week-ends & jours fériés</span>
-              <span class="pill">Plusieurs chats</span>
+              <span class="pill">Plusieurs animaux</span>
               <span class="pill">Médicaments / soins</span>
               <span class="pill">Demande urgente</span>
             </div>
             <p class="small">Je vous confirme toujours un devis simple par écrit avant validation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="confiance">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <h2>Confiance & sérénité</h2>
+            <p>Votre animal mérite une présence calme et attentive. Je privilégie une approche respectueuse, sans précipitation, adaptée à son tempérament.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="feature" data-reveal>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V6a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 4v5h5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 13h8M8 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <h3>ACACED (chat & chien)</h3>
+              <p>Certification obligatoire en France pour exercer auprès des animaux de compagnie. Un cadre sérieux, des bonnes pratiques pour chats et chiens.</p>
+            </div>
+
+            <div class="feature" data-reveal>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l8 4v6c0 5.2-3.4 9.6-8 10-4.6-.4-8-4.8-8-10V6l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 9v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Assurance RC Pro</h3>
+              <p>Vous confiez vos clés et votre domicile : je suis assurée en responsabilité civile professionnelle.</p>
+            </div>
+
+            <div class="feature" data-reveal>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c5-3 8-7 8-11a4 4 0 00-6-3 4 4 0 00-2 2 4 4 0 00-2-2 4 4 0 00-6 3c0 4 3 8 8 11z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Suivi personnalisé</h3>
+              <p>Habitudes, alimentation, jeux, promenades, zones sensibles… Chaque animal a son rythme, je m'y adapte.</p>
+            </div>
+          </div>
+
+          <div class="callout" data-reveal>
+            <div class="callout-inner">
+              <div>
+                <h3>Service local à Bordeaux</h3>
+                <p>Interventions principalement à Bordeaux et autour (quartiers centraux + proximité). Dites-moi votre adresse, je vous confirme rapidement la zone.</p>
+              </div>
+              <a class="button tertiary" href="#contact">Vérifier la disponibilité</a>
+            </div>
           </div>
         </div>
       </section>
@@ -579,7 +603,21 @@
             <details class="faq-item" data-reveal>
               <summary>Êtes-vous assurée ?</summary>
               <div class="faq-body">
-                <p>Oui, RC Pro. Ça couvre les bêtises éventuelles chez vous.</p>
+                <p>Oui, RC Pro. Ça couvre les bêtises éventuelles chez vous (chats et chiens).</p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-reveal>
+              <summary>Vous gérez aussi les chiens ?</summary>
+              <div class="faq-body">
+                <p>Oui, j'ai l'ACACED chats et chiens. Je peux faire des visites à domicile (promenades incluses) ou du home sitting.</p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-reveal>
+              <summary>C'est quoi le home sitting ?</summary>
+              <div class="faq-body">
+                <p>Je dors chez vous pendant votre absence. Présence constante, idéal pour les chiens ou animaux anxieux.</p>
               </div>
             </details>
 
@@ -611,7 +649,7 @@
         <div class="container">
           <div class="section-header" data-reveal>
             <h2>Réserver une visite</h2>
-            <p>Parlez-moi de votre chat et de vos dates : je vous réponds rapidement avec une proposition claire.</p>
+            <p>Parlez-moi de votre animal et de vos dates : je vous réponds rapidement avec une proposition claire.</p>
           </div>
 
           <form class="form" id="contact-form" novalidate data-reveal>
