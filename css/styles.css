@@ -587,23 +587,6 @@ a:hover { text-decoration: underline; }
   display: block;
 }
 
-.callout {
-  margin-top: 18px;
-  background: linear-gradient(140deg, rgba(245, 237, 229, 0.65), rgba(245, 208, 200, 0.20));
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 18px;
-}
-.callout-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.callout h3 { margin: 0 0 6px; letter-spacing: -0.01em; }
-.callout p { margin: 0; color: var(--muted); }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -710,15 +693,6 @@ a:hover { text-decoration: underline; }
 }
 .step h3 { margin: 0 0 6px; letter-spacing: -0.01em; }
 .step p { margin: 0; color: var(--muted); }
-
-.micro {
-  margin-top: 14px;
-  background: rgba(245, 208, 200, 0.25);
-  border: 1px solid rgba(201, 144, 137, 0.20);
-  border-radius: var(--radius-lg);
-  padding: 14px 16px;
-}
-.micro p { margin: 0; color: var(--warm-brown); }
 
 .pricing {
   display: grid;
