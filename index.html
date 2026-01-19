@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.json" />
     <!-- Preload critical resources -->
-    <link rel="preload" href="assets/images/logos/logov2.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="assets/images/logos/logov2.webp" as="image" type="image/webp" fetchpriority="high" />
     <link rel="preload" href="css/styles.css" as="style" />
     <link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_KU7NShXUEKi4Rw.woff2" as="font" type="font/woff2" crossorigin />
     
@@ -65,7 +65,10 @@
       <section class="hero">
         <div class="container hero-content">
           <div class="hero-logo">
-            <img src="assets/images/logos/logov2.png" alt="Douces Pattes - Pet Sitter Bordeaux" class="hero-logo-img" width="1102" height="1162" fetchpriority="high" decoding="async" />
+            <picture>
+              <source srcset="assets/images/logos/logov2.webp" type="image/webp">
+              <img src="assets/images/logos/logov2.png" alt="Douces Pattes - Pet Sitter Bordeaux" class="hero-logo-img" width="1102" height="1162" fetchpriority="high" decoding="async" />
+            </picture>
           </div>
 
           <div class="hero-copy">
@@ -125,7 +128,10 @@
           <div class="cards">
             <article class="card" data-reveal>
               <div class="feature-icon icon-image" aria-hidden="true">
-                <img src="assets/passion.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                <picture>
+                  <source srcset="assets/passion.webp" type="image/webp">
+                  <img src="assets/passion.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <h3>Passion pour les animaux</h3>
               <p class="card-desc">J'observe comment votre animal se comporte, ce qui le rassure, ce dont il a besoin. Chats ou chiens : je m'adapte à chaque caractère, sans appliquer de méthode toute faite.</p>
@@ -133,7 +139,10 @@
 
             <article class="card" data-reveal>
               <div class="feature-icon icon-image" aria-hidden="true">
-                <img src="assets/local.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                <picture>
+                  <source srcset="assets/local.webp" type="image/webp">
+                  <img src="assets/local.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <h3>Service local à Bordeaux</h3>
               <p class="card-desc">J'interviens à Bordeaux et dans ses quartiers. Cette connaissance du secteur me permet d'être réactive et de m'organiser plus facilement en cas d'imprévu.</p>
@@ -141,7 +150,10 @@
 
             <article class="card" data-reveal>
               <div class="feature-icon icon-image" aria-hidden="true">
-                <img src="assets/disponibilite.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                <picture>
+                  <source srcset="assets/disponibilite.webp" type="image/webp">
+                  <img src="assets/disponibilite.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <h3>Disponibilité & réactivité</h3>
               <p class="card-desc">Je réponds rapidement et je limite volontairement le nombre de visites par jour. Cela me permet d'être réellement disponible pour chaque animal.</p>
@@ -149,7 +161,10 @@
 
             <article class="card" data-reveal>
               <div class="feature-icon icon-image" aria-hidden="true">
-                <img src="assets/Approche.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                <picture>
+                  <source srcset="assets/Approche.webp" type="image/webp">
+                  <img src="assets/Approche.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <h3>Approche douce & calme</h3>
               <p class="card-desc">Je prends le temps nécessaire. Si votre animal a envie de jouer, on joue. S'il préfère rester à distance, je respecte son rythme, sans jamais forcer le contact.</p>
