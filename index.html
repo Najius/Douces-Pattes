@@ -3,14 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="description" content="Pet sitter à Bordeaux : visites à domicile et home sitting pour chats et chiens, soins personnalisés, nouvelles quotidiennes. ACACED, assurée, fiable." />
     <title>Pet Sitter Bordeaux | Garde chats & chiens à domicile — Douces Pattes</title>
-    <link rel="icon" href="assets/images/logos/logo.jpg" />
-    <link rel="apple-touch-icon" href="assets/images/logos/logo.jpg" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://doucespattes.fr/" />
+    <meta property="og:title" content="Pet Sitter Bordeaux | Garde chats & chiens à domicile — Douces Pattes" />
+    <meta property="og:description" content="Pet sitter professionnelle à Bordeaux : visites à domicile et home sitting pour chats et chiens. ACACED, assurée, suivis quotidiens avec photos et vidéos." />
+    <meta property="og:image" content="https://doucespattes.fr/assets/images/logos/logov2.png" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://doucespattes.fr/" />
+    <meta name="twitter:title" content="Pet Sitter Bordeaux | Garde chats & chiens à domicile — Douces Pattes" />
+    <meta name="twitter:description" content="Pet sitter professionnelle à Bordeaux : visites à domicile et home sitting pour chats et chiens. ACACED, assurée, suivis quotidiens avec photos et vidéos." />
+    <meta name="twitter:image" content="https://doucespattes.fr/assets/images/logos/logov2.png" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/patterns.css" />
   </head>
@@ -164,39 +188,56 @@
             <h2>Quelques visages familiers</h2>
             <p>Les animaux dont je prends soin régulièrement.</p>
           </div>
+          
+          <!-- Filtres galerie -->
+          <div class="gallery-filters" data-reveal>
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="chat">Chats</button>
+            <button class="filter-btn" data-filter="chien">Chiens</button>
+          </div>
         </div>
 
         <div class="gallery-wrapper">
           <div class="gallery-scroll">
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat tigré sur canapé" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chat" data-lightbox>
+              <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chat tigré sur canapé" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Minou</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Golden retriever heureux" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chien" data-lightbox>
+              <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Golden retriever heureux" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Rocky</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat mignon" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chat" data-lightbox>
+              <img src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chat mignon" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Mimi</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chien beagle adorable" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chien" data-lightbox>
+              <img src="https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chien beagle adorable" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Bella</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat tigré" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chat" data-lightbox>
+              <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chat tigré" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Tigrou</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Labrador joyeux" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chien" data-lightbox>
+              <img src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Labrador joyeux" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Max</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat noir élégant" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chat" data-lightbox>
+              <img src="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chat noir élégant" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Ombre</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1458925/pexels-photo-1458925.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chien border collie" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chien" data-lightbox>
+              <img src="https://images.pexels.com/photos/1458925/pexels-photo-1458925.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chien border collie" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Luna</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1359307/pexels-photo-1359307.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chat paisible" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chat" data-lightbox>
+              <img src="https://images.pexels.com/photos/1359307/pexels-photo-1359307.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chat paisible" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Félix</div>
             </div>
-            <div class="gallery-photo" data-reveal>
-              <img src="https://images.pexels.com/photos/1629781/pexels-photo-1629781.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chien husky" loading="lazy" decoding="async" />
+            <div class="gallery-photo" data-reveal data-category="chien" data-lightbox>
+              <img src="https://images.pexels.com/photos/1629781/pexels-photo-1629781.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chien husky" loading="lazy" decoding="async" width="400" height="267" />
+              <div class="photo-caption">Zeus</div>
             </div>
           </div>
         </div>
@@ -660,8 +701,8 @@
               </div>
 
               <div class="field">
-                <label for="cat-name">Nom du chat</label>
-                <input id="cat-name" name="cat-name" required />
+                <label for="pet-name">Nom de l'animal</label>
+                <input id="pet-name" name="pet-name" placeholder="Ex. Minou, Rocky..." required />
               </div>
             </div>
 
@@ -699,9 +740,23 @@
             </div>
 
             <div class="field">
-              <label for="message">Votre message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Âge du chat, caractère, traitement, habitudes, accès au logement…" required></textarea>
+              <label for="pet-type">Type d'animal</label>
+              <select id="pet-type" name="pet-type" required>
+                <option value="">Sélectionnez...</option>
+                <option value="chat">Chat</option>
+                <option value="chien">Chien</option>
+                <option value="chat-chien">Chat et chien</option>
+                <option value="autre">Autre (précisez dans le message)</option>
+              </select>
             </div>
+
+            <div class="field">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Âge, caractère, traitement éventuel, habitudes, accès au logement…" required></textarea>
+            </div>
+
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="website" id="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
             <button class="button primary" type="submit">Envoyer la demande</button>
             <p class="form-hint" id="form-hint">Ce formulaire ouvre votre application mail pour envoyer le message. Vous pouvez aussi écrire directement à <a href="mailto:contact@doucespattes.fr">contact@doucespattes.fr</a>.</p>
@@ -711,26 +766,99 @@
       </section>
     </main>
 
+    <!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Image précédente">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Image suivante">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- Bouton CTA flottant -->
+    <a href="#contact" class="floating-cta" id="floating-cta" aria-label="Réserver une visite">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M19 4H5a2 2 0 00-2 2v14l4-4h12a2 2 0 002-2V6a2 2 0 00-2-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 9h6M9 13h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Réserver</span>
+    </a>
+
     <footer class="footer">
       <div class="container footer-inner">
         <div>
           <div class="footer-brand">
             <span>Douces Pattes</span>
           </div>
-          <div class="footer-sub">Cat sitting à domicile — France</div>
-        </div>
-        <div class="footer-links">
-          <a href="#top">Haut de page</a>
-          <a href="#confiance">Confiance</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+          <div class="footer-sub">Pet sitting à domicile — Bordeaux, France</div>
         </div>
         <div class="footer-legal">
-          <div>Mentions légales : à compléter</div>
+          <div><a href="mentions-legales.html">Mentions légales</a> • <a href="#top">Haut de page ↑</a></div>
           <div>© <span id="year"></span> Douces Pattes</div>
         </div>
       </div>
     </footer>
+
+    <!-- Schema.org JSON-LD pour SEO local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Douces Pattes",
+      "description": "Pet sitter professionnelle à Bordeaux proposant des visites à domicile et du home sitting pour chats et chiens. Service personnalisé, fiable et attentionné.",
+      "url": "https://doucespattes.fr",
+      "telephone": "+33-XX-XX-XX-XX-XX",
+      "email": "contact@doucespattes.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bordeaux",
+        "addressRegion": "Nouvelle-Aquitaine",
+        "postalCode": "33000",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "44.8378",
+        "longitude": "-0.5792"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Bordeaux"
+      },
+      "priceRange": "€€",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "image": "https://doucespattes.fr/assets/images/logos/logov2.png",
+      "sameAs": [
+        "https://www.facebook.com/doucespattes",
+        "https://www.instagram.com/doucespattes"
+      ],
+      "serviceType": [
+        "Pet Sitting",
+        "Cat Sitting",
+        "Dog Sitting",
+        "Home Sitting"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "ACACED",
+        "name": "Attestation de Connaissances pour les Animaux de Compagnie d'Espèces Domestiques"
+      }
+    }
+    </script>
 
     <script src="js/script.js"></script>
   </body>
