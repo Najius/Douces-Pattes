@@ -1,0 +1,17 @@
+# Fichiers de configuration sensibles
+.ftpconfig
+*.log
+
+# macOS
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Fichiers de build locaux
+*.min.css.map
+*.min.js.map
+
+# Fichiers temporaires
+*.tmp
+*.swp
