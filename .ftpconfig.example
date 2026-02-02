@@ -1,0 +1,12 @@
+# Configuration FTP Hostinger
+# Copiez ce fichier en .ftpconfig et remplissez vos identifiants
+# ⚠️ NE JAMAIS COMMITER .ftpconfig dans Git !
+
+FTP_HOST=ftp.doucespattes.fr
+FTP_USER=votre_nom_utilisateur_ftp
+FTP_PASS=votre_mot_de_passe
+FTP_DIR=/public_html
+FTP_PORT=21
+
+# Informations à récupérer dans :
+# hPanel Hostinger > Fichiers > Comptes FTP

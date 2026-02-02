@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="Pet sitter à Bordeaux : visites à domicile et home sitting pour chats et chiens, soins personnalisés, nouvelles quotidiennes. ACACED, assurée, fiable." />
+    <title>Pet Sitter Bordeaux | Garde chats & chiens à domicile — Douces Pattes</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://doucespattes.fr/" />
+    <meta property="og:title" content="Pet Sitter Bordeaux | Garde chats & chiens à domicile — Douces Pattes" />
+    <meta property="og:description" content="Pet sitter professionnelle à Bordeaux : visites à domicile et home sitting pour chats et chiens. ACACED, assurée, suivis quotidiens avec photos et vidéos." />
+    <meta property="og:image" content="https://doucespattes.fr/assets/images/logos/logov2.png" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://doucespattes.fr/" />
+    <meta name="twitter:title" content="Pet Sitter Bordeaux | Garde chats & chiens à domicile — Douces Pattes" />
+    <meta name="twitter:description" content="Pet sitter professionnelle à Bordeaux : visites à domicile et home sitting pour chats et chiens. ACACED, assurée, suivis quotidiens avec photos et vidéos." />
+    <meta name="twitter:image" content="https://doucespattes.fr/assets/images/logos/logov2.png" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logos/logov2.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="css/styles.min.css" as="style" />
+    <link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_KU7NShXUEKi4Rw.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="preload" href="css/patterns.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="css/patterns.min.css" /></noscript>
+  </head>
+  <body>
+    <!-- IMPORTANT : Ceci est une version template pour production Hostinger -->
+    <!-- Ce fichier contient les modifications nécessaires pour le déploiement -->
+    <!-- 
+      CHANGEMENTS PAR RAPPORT À index.html :
+      1. CSS minifiés : styles.min.css et patterns.min.css
+      2. JS minifié : script.min.js
+      3. Service Worker minifié : sw.min.js
+      4. Formulaire modifié pour utiliser send-email.php au lieu de Netlify
+      
+      INSTRUCTIONS :
+      - NE PAS utiliser ce fichier directement
+      - Copiez les modifications dans votre index.html
+      - Ou renommez ce fichier en index.html après backup
+    -->
+    
+    <!-- Le reste du contenu HTML reste identique à index.html -->
+    <!-- Seules les références aux fichiers CSS/JS et le formulaire changent -->
+    
+    <p style="padding: 2rem; text-align: center; background: #fff3cd; border: 2px solid #856404; margin: 2rem;">
+      <strong>⚠️ FICHIER TEMPLATE DE PRODUCTION</strong><br>
+      Ce fichier sert de référence pour les modifications à apporter à index.html.<br>
+      Consultez DEPLOIEMENT_HOSTINGER.md pour les instructions complètes.
+    </p>
+    
+    <!-- MODIFICATION PRINCIPALE : FORMULAIRE DE CONTACT -->
+    <!-- 
+      Dans index.html, remplacez la balise <form> par :
+      
+      <form class="form" id="contact-form" method="POST" action="/send-email.php" novalidate data-reveal>
+        ... (contenu du formulaire identique)
+        
+        SUPPRIMER :
+        - data-netlify="true"
+        - data-netlify-honeypot="website"
+        - action="/merci.html"
+        - <input type="hidden" name="form-name" value="contact" />
+        
+        GARDER :
+        - Le champ honeypot : <input type="text" name="website" ... />
+        - Tous les autres champs du formulaire
+      </form>
+    -->
+    
+    <!-- MODIFICATION : SCRIPT EN BAS DE PAGE -->
+    <!--
+      Remplacez :
+      <script src="js/script.js"></script>
+      
+      Par :
+      <script src="js/script.min.js"></script>
+    -->
+    
+    <!-- MODIFICATION : SERVICE WORKER -->
+    <!--
+      Dans js/script.min.js, assurez-vous que l'enregistrement du Service Worker utilise :
+      navigator.serviceWorker.register('/sw.min.js')
+    -->
+    
+  </body>
+</html>
